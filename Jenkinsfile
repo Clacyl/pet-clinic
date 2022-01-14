@@ -65,7 +65,7 @@ pipeline {
                 sh "./deploy.sh test $TAG_NAME"
             }
         }
-        
+
         stage("End to End Tests") {
             when {
                 branch 'master'
@@ -76,8 +76,6 @@ pipeline {
                 sh "./ui-tests.sh"
             }
         }
-
-
         
     }
 }
